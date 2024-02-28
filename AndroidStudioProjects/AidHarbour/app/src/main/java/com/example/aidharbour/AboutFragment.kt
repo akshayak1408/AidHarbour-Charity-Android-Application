@@ -37,10 +37,6 @@ class AboutFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
-
-        supportActionBar?.title = "About Us"
     }
 
     override fun onCreateView(
