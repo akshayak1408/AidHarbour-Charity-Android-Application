@@ -3,6 +3,8 @@ package com.example.aidharbour
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
@@ -34,8 +36,9 @@ class ProfileFragment : Fragment() {
         val toolbar: Toolbar = view.findViewById(R.id.toolbar)
         (activity as AppCompatActivity).setSupportActionBar(toolbar)
         (activity as AppCompatActivity).supportActionBar?.title = "User Profile"
-
+        toolbar.overflowIcon = null
     }
+
 
     companion object {
         @JvmStatic

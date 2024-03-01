@@ -5,8 +5,11 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -38,8 +41,26 @@ class HomeFragment : Fragment() {
         val toolbar: Toolbar = view.findViewById(R.id.toolbar)
         (activity as AppCompatActivity).setSupportActionBar(toolbar)
         (activity as AppCompatActivity).supportActionBar?.title = "Home Page"
+        toolbar.overflowIcon = null
 
+        val volunteers: Button = view.findViewById(R.id.vol_rating)
+        val login_reg: Button = view.findViewById(R.id.login_reg)
+        val view_history: Button = view.findViewById(R.id.view_history)
+        volunteers.setOnClickListener {
+            val intent = Intent(activity, Volunteers::class.java)
+            startActivity(intent)
         }
+
+        login_reg.setOnClickListener {
+            val intent = Intent(activity, Login::class.java)
+            startActivity(intent)
+        }
+
+        view_history.setOnClickListener {
+            val intent = Intent(activity, History::class.java)
+            startActivity(intent)
+        }
+    }
 
     companion object {
         @JvmStatic

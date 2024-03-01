@@ -15,7 +15,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
-            app:titleTextColor="@android:color/white" />
+            app:titleTextColor="@android:color/white"
+            app:popupTheme="@null" />
 
         <TextView
             android:id="@+id/textView"
@@ -71,6 +72,18 @@ inspiring and mobilizing users for meaningful contributions."
             android:text="Visit our github page: \nhttps://github.com/akshayak1408/AidHarbour-Charity-Android-Application"
             android:textSize="18sp" />
 
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="550dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="100dp"
+            android:autoLink="phone"
+            android:linksClickable="true"
+            android:text="Contact numbers: \n+917385917592\n+916273610938"
+            android:textSize="18sp" />
 
 
 </FrameLayout>
