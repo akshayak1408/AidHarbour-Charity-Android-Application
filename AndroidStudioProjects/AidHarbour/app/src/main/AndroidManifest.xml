@@ -15,6 +15,9 @@
         android:theme="@style/Theme.AidHarbour"
         tools:targetApi="31">
         <activity
+            android:name=".History2"
+            android:exported="false" />
+        <activity
             android:name=".History"
             android:exported="false" />
         <activity

@@ -57,7 +57,7 @@ class HomeFragment : Fragment() {
         }
 
         view_history.setOnClickListener {
-            val intent = Intent(activity, History::class.java)
+            val intent = Intent(activity, History2::class.java)
             startActivity(intent)
         }
     }

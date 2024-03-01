@@ -21,7 +21,6 @@ class Volunteers : AppCompatActivity() {
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
-        toolbar.title = "Rate Volunteers"
         toolbar.overflowIcon = null
 
         recyclerview.layoutManager = LinearLayoutManager(this)

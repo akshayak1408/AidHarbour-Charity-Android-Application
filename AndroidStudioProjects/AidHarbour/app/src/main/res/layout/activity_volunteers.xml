@@ -17,6 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
         app:titleTextColor="@android:color/white"
+        app:title="Rate Volunteers"
         app:popupTheme="@null" />
 
     <TextView

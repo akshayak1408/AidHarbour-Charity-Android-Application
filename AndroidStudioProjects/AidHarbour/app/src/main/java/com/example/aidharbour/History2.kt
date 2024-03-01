@@ -4,14 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 
-class History : AppCompatActivity() {
+class History2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_history)
+        setContentView(R.layout.activity_history2)
 
         val toolbar: Toolbar =findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-        toolbar.title = "View History"
+        //toolbar.title = "View History"
         toolbar.overflowIcon = null
     }
 }
