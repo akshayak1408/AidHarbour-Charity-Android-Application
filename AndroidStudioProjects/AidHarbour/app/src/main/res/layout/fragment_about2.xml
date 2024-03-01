@@ -8,27 +8,69 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="0dp"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
             android:background="?attr/colorPrimary"
-            app:titleTextColor="@android:color/white"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
+            app:titleTextColor="@android:color/white" />
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="399dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="140dp"
             android:layout_marginEnd="50dp"
             android:layout_marginBottom="100dp"
-            android:text="AidHarbour: The essential tool for simplified contributions and communal influence.\nSeamlessly engage with shelters, NGOs, and contributors to enact significant change in the lives of the less fortunate."
+            android:text="An essential tool for simplified contributions and communal influence. Seamlessly engage with shelters, NGOs, and contributors to enact significant change in the lives of the less fortunate. \n\nThe app is designed to engage volunteers and offer real-time
+updates on philanthropic initiatives. Personalized features contribute to a seamless user experience,
+inspiring and mobilizing users for meaningful contributions."
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="100dp"
+            android:text="AidHarbour"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="420dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="100dp"
+            android:text="Contact Us:"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/urlTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="460dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="100dp"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:text="Visit our github page: \nhttps://github.com/akshayak1408/AidHarbour-Charity-Android-Application"
+            android:textSize="18sp" />
+
 
 
 </FrameLayout>
