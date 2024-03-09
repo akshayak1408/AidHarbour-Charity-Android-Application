@@ -34,27 +34,15 @@
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
+
             <EditText
-                android:id="@+id/firstname"
+                android:id="@+id/fullname"
                 android:layout_width="match_parent"
                 android:layout_height="53dp"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/custom_edittext"
                 android:drawablePadding="8dp"
-                android:hint="First Name"
-
-                android:padding="6dp"
-                android:textColor="@color/black" />
-
-
-            <EditText
-                android:id="@+id/lastname"
-                android:layout_width="match_parent"
-                android:layout_height="53dp"
-                android:layout_marginTop="40dp"
-                android:background="@drawable/custom_edittext"
-                android:drawablePadding="8dp"
-                android:hint="Last Name"
+                android:hint="Full Name"
 
                 android:padding="6dp"
                 android:textColor="@color/black" />

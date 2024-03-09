@@ -24,13 +24,13 @@ class Login : AppCompatActivity() {
         loginButton.setOnClickListener {
             val enteredUsername = username.text.toString()
             val enteredPassword = password.text.toString()
-            if (enteredUsername == "ananya11@gmail.com" && enteredPassword == "ananya11@#") {
+            /*if (enteredUsername == "ananya11@gmail.com" && enteredPassword == "ananya11@#") {
                 showToast("Login Successful!")
                 val intent = Intent(this, AboutFragment::class.java)
                 startActivity(intent)
             } else {
                 showToast("Login Failed!")
-            }
+            }*/
         }
 
         RegisterButton.setOnClickListener{

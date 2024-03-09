@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "601483313682",
+    "project_id": "aidharbour",
+    "storage_bucket": "aidharbour.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601483313682:android:16223d99ac10f993d64ecb",
+        "android_client_info": {
+          "package_name": "com.example.aidharbour"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAogc9hPPDunGhWok4mArFHCQZeaLtapo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -21,7 +21,7 @@
             android:id="@+id/text1_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ramesh"
+            android:text="Shantanu"
             android:textSize="18sp"
             android:layout_toEndOf="@id/label1_textview"
             android:padding="16dp"/>
@@ -59,7 +59,7 @@
             android:id="@+id/text3_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="253 Sector 5"
+            android:text="Agra Sector 25"
             android:textSize="18sp"
             android:layout_toEndOf="@id/label3_textview"
             android:layout_below="@id/text2_textview"
