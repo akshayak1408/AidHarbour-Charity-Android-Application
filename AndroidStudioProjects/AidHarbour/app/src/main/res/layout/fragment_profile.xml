@@ -69,7 +69,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/textview_name"
                     android:paddingLeft="30dp"
-                    android:text="Donor"
+                    android:text="Admin"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="10dp"
                     android:layout_toEndOf="@id/profile_img"

@@ -60,6 +60,19 @@
                 android:textColor="@color/black" />
 
             <EditText
+                android:id="@+id/contactno"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/custom_edittext"
+                android:drawablePadding="6dp"
+                android:hint="Contact Number"
+
+                android:padding="8dp"
+                android:textColor="@color/black" />
+
+
+            <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
