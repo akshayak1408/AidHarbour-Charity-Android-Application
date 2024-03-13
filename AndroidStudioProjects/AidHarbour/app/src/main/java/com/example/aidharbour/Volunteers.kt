@@ -8,7 +8,6 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclerviewmine2.CustomAdapter
-import com.example.recyclerviewmine2.ItemsViewModel
 
 class Volunteers : AppCompatActivity() {
     lateinit var name: EditText

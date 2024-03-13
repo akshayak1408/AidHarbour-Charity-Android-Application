@@ -41,11 +41,9 @@ class Login : AppCompatActivity() {
                 auth.signInWithEmailAndPassword(enteredUsername, enteredPassword)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
-                            showToast("Login Successful!")
-                            /*val fragment: Fragment = ProfileFragment()
-                            val fragmentTransaction: FragmentTransaction = supportFragmentManager.beginTransaction()
-                            fragmentTransaction.replace(R.id.container, fragment).commit();*/
-                            val intent = Intent(this, MainActivity::class.java)
+                            showToast("Login Successful! ")
+                            val intent = Intent(this, Profilelogin::class.java)
+                            intent.putExtra("username", enteredUsername)
                             startActivity(intent)
                         } else {
                             showToast("Login Failed!")
@@ -57,7 +55,6 @@ class Login : AppCompatActivity() {
             val intent = Intent(this, Register::class.java)
             startActivity(intent)
         }
-
     }
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()

@@ -1,16 +1,13 @@
 package com.example.recyclerviewmine2
 
-import android.content.ClipData.Item
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.RecyclerView
+import com.example.aidharbour.ItemsViewModel
 import com.example.aidharbour.R
 
 class CustomAdapter(private val mList: List<ItemsViewModel>, private val context: Context) : RecyclerView.Adapter<CustomAdapter.ViewHolder>(){

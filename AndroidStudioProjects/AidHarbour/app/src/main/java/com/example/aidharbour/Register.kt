@@ -58,7 +58,6 @@ class Register : AppCompatActivity() {
                                 userDetails["contactno"] = enteredContactno
                                 userDetails["password"] = enteredPassword
 
-
                                 referenceProfile.child(user.uid).setValue(userDetails)
                                     .addOnCompleteListener { registrationTask ->
                                         if (registrationTask.isSuccessful) {
