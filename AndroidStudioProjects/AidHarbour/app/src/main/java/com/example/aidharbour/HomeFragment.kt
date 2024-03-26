@@ -43,13 +43,8 @@ class HomeFragment : Fragment() {
         (activity as AppCompatActivity).supportActionBar?.title = "Home Page"
         toolbar.overflowIcon = null
 
-        val volunteers: Button = view.findViewById(R.id.vol_rating)
         val login_reg: Button = view.findViewById(R.id.login_reg)
         val view_history: Button = view.findViewById(R.id.view_history)
-        volunteers.setOnClickListener {
-            val intent = Intent(activity, Volunteers::class.java)
-            startActivity(intent)
-        }
 
         login_reg.setOnClickListener {
             val intent = Intent(activity, Login::class.java)

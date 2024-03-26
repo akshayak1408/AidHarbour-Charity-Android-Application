@@ -42,8 +42,11 @@ class Login : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             showToast("Login Successful! ")
+                            val user = auth.currentUser
+                            val uid = user?.uid
                             val intent = Intent(this, Profilelogin::class.java)
                             intent.putExtra("username", enteredUsername)
+                            intent.putExtra("uid", uid)
                             startActivity(intent)
                         } else {
                             showToast("Login Failed!")

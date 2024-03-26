@@ -8,11 +8,14 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclerviewmine2.CustomAdapter
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class Volunteers : AppCompatActivity() {
     lateinit var name: EditText
     lateinit var regno: EditText
     lateinit var add: Button
+    lateinit var reference: DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_volunteers)
@@ -26,20 +29,35 @@ class Volunteers : AppCompatActivity() {
         name = findViewById(R.id.name)
         regno = findViewById(R.id.rating)
         add = findViewById(R.id.add)
-
+        reference = FirebaseDatabase.getInstance().getReference("Volunteers")
+        val id = intent.getStringExtra("uid")
+        val usrnm = intent.getStringExtra("username")
         val data = ArrayList<ItemsViewModel>()
+
         add.setOnClickListener {
-            var nm = name.text.toString()
-            var rn = regno.text.toString()
-            var rn2 = rn.toInt()
-            data.add(ItemsViewModel(nm,rn2))
-            val adapter = CustomAdapter(data, this )
-            recyclerview.adapter = adapter
+            val nm = name.text.toString()
+            val rn = regno.text.toString()
+            val vid = id.toString()
+            val username = usrnm.toString()
+            val entryData = HashMap<String, Any>()
+            entryData["rated_by"] = username
+            entryData["v_name"] = nm
+            entryData["v_rating"] = rn
+
+            val entryKey = reference.child(vid).push().key ?: ""
+
+            reference.child(vid).child(entryKey).setValue(entryData)
+                .addOnSuccessListener {
+                    val rn2 = rn.toDouble()
+                    data.add(ItemsViewModel(nm, rn2))
+                    val adapter = CustomAdapter(data, this)
+                    recyclerview.adapter = adapter
+                }
+
         }
 
         val adapter = CustomAdapter(data, this)
         recyclerview.adapter = adapter
-
 
     }
 }

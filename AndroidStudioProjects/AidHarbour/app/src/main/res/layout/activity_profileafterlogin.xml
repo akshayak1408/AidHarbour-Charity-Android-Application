@@ -69,7 +69,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/textview_name"
                     android:paddingLeft="30dp"
-                    android:text=""
+                    android:text="Donor"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="10dp"
                     android:layout_toEndOf="@id/profile_img"
@@ -79,7 +79,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="10dp"
+               >
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -154,8 +155,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#333A73"
-                    android:text="UPDATE" />
+                    android:text="UPDATE PROFILE" />
+                <Button
+                    android:id="@+id/btn_googlemaps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#333A73"
+                    android:text="LOCATE SHELTERS" />
+                <Button
+                    android:id="@+id/vol_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#333A73"
+                    android:text="RATE VOLUNTEERS" />
+
             </LinearLayout>
         </LinearLayout>
+
     </ScrollView>
 </FrameLayout>

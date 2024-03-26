@@ -29,6 +29,7 @@
             android:text="An essential tool for simplified contributions and communal influence. Seamlessly engage with shelters, NGOs, and contributors to enact significant change in the lives of the less fortunate. \n\nThe app is designed to engage volunteers and offer real-time
 updates on philanthropic initiatives. Personalized features contribute to a seamless user experience,
 inspiring and mobilizing users for meaningful contributions."
+            android:textColor="#000000"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -44,6 +45,7 @@ inspiring and mobilizing users for meaningful contributions."
             android:layout_marginEnd="50dp"
             android:layout_marginBottom="100dp"
             android:text="AidHarbour"
+            android:textColor="#000000"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -56,6 +58,7 @@ inspiring and mobilizing users for meaningful contributions."
             android:layout_marginEnd="50dp"
             android:layout_marginBottom="100dp"
             android:text="Contact Us:"
+            android:textColor="#000000"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -70,6 +73,7 @@ inspiring and mobilizing users for meaningful contributions."
             android:autoLink="web"
             android:linksClickable="true"
             android:text="Visit our github page: \nhttps://github.com/akshayak1408/AidHarbour-Charity-Android-Application"
+            android:textColor="#000000"
             android:textSize="18sp" />
 
         <TextView
@@ -83,6 +87,7 @@ inspiring and mobilizing users for meaningful contributions."
             android:autoLink="phone"
             android:linksClickable="true"
             android:text="Contact numbers: \n+917385917592\n+916273610938"
+            android:textColor="#000000"
             android:textSize="18sp" />
 
 

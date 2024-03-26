@@ -56,24 +56,26 @@
                     android:id="@+id/textview_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="30dp"
-                    android:text="Anonymous"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="10dp"
                     android:layout_toEndOf="@id/profile_img"
-                    android:textSize="20sp"
-                    />
+                    android:paddingLeft="30dp"
+                    android:text="Admin"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
                 <TextView
                     android:id="@+id/textview_type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/textview_name"
-                    android:paddingLeft="30dp"
-                    android:text="Reviewer"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="10dp"
                     android:layout_toEndOf="@id/profile_img"
-                    android:textSize="14sp"/>
+                    android:paddingLeft="30dp"
+                    android:text="-"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
             </RelativeLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -92,8 +94,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawablePadding="10dp"
-                        android:text="Anonymous"
-                        />
+                        android:text="-"
+                        android:textColor="#000000" />
                 </com.google.android.material.textfield.TextInputLayout>
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
@@ -108,7 +110,7 @@
                         android:layout_height="wrap_content"
                         android:drawablePadding="10dp"
                         android:text="-"
-                        />
+                        android:textColor="#000000" />
 
                 </com.google.android.material.textfield.TextInputLayout>
                 <com.google.android.material.textfield.TextInputLayout
@@ -125,7 +127,7 @@
                         android:layout_height="wrap_content"
                         android:drawablePadding="10dp"
                         android:text="-"
-                        />
+                        android:textColor="#000000" />
 
                 </com.google.android.material.textfield.TextInputLayout>
                 <com.google.android.material.textfield.TextInputLayout
@@ -145,12 +147,6 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <Button
-                    android:id="@+id/btn_update"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#333A73"
-                    android:text="UPDATE" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

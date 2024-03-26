@@ -39,7 +39,7 @@ class CustomAdapter(private val mList: List<ItemsViewModel>, private val context
         holder.textView.text = ItemsViewModel.name
 
         holder.itemView.setOnClickListener {
-            Toast.makeText(context , "Volunteer "+ ItemsViewModel.name + " rated: "+ItemsViewModel.rating.toString() + " stars", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context , "Volunteer "+ ItemsViewModel.name + " rated "+ItemsViewModel.rating.toString() + " stars", Toast.LENGTH_SHORT).show()
         }
     }
 
