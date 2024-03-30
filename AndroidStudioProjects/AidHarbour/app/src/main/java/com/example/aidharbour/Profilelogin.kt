@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.content.ContentProviderCompat.requireContext
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -21,6 +21,11 @@ class Profilelogin : AppCompatActivity() {
     private lateinit var cnum: com.google.android.material.textfield.TextInputEditText
     private lateinit var pwd: com.google.android.material.textfield.TextInputEditText
     private lateinit var but_update: Button
+    private lateinit var googlemap: Button
+    private lateinit var volunteers: Button
+    private lateinit var viewhistory: Button
+    private lateinit var mAuth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profileafterlogin)
@@ -33,71 +38,93 @@ class Profilelogin : AppCompatActivity() {
         pwd = findViewById(R.id.psswrd)
         databaseReference = FirebaseDatabase.getInstance().getReference("RegisteredUsers")
         but_update = findViewById(R.id.btn_update)
-        val volunteers: Button = findViewById(R.id.vol_rating)
+        googlemap = findViewById(R.id.btn_googlemaps)
+        volunteers = findViewById(R.id.vol_rating)
+        viewhistory = findViewById(R.id.view_history2)
+        mAuth = FirebaseAuth.getInstance()
 
         volunteers.setOnClickListener {
-            val intent = Intent(this,  Volunteers::class.java)
+            val intent = Intent(this, Volunteers::class.java)
             intent.putExtra("username", username)
             intent.putExtra("uid", uid)
             startActivity(intent)
         }
 
-        databaseReference.addListenerForSingleValueEvent(object : ValueEventListener {
-                override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    val usersList = ArrayList<HashMap<String, String>>()
+        viewhistory.setOnClickListener {
+            val intent = Intent(this@Profilelogin, History2::class.java)
+            intent.putExtra("uid", uid)
+            startActivity(intent)
 
-                    for (userSnapshot in dataSnapshot.children) {
-                        val userDataMap = userSnapshot.value as? HashMap<String, String>
-                        if (userDataMap != null) {
-                            usersList.add(userDataMap)
-                        }
-                    }
-
-                    for (userDataMap in usersList) {
-                        if (userDataMap["username"] == username) {
-                            tv_name.text = userDataMap["fullname"]
-                            full_name.setText(userDataMap["fullname"])
-                            email.setText(userDataMap["username"])
-                            cnum.setText(userDataMap["contactno"])
-                            pwd.setText(userDataMap["password"])
-                        }
-                    }
-                }
-
-                override fun onCancelled(databaseError: DatabaseError) {
-                    println("Database Error: ${databaseError.message}")
-                }
-            })
-        but_update.setOnClickListener {
-            databaseReference.addListenerForSingleValueEvent(object : ValueEventListener {
-                override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    val usersList = ArrayList<HashMap<String, String>>()
-
-                    for (userSnapshot in dataSnapshot.children) {
-                        val userDataMap = userSnapshot.value as? HashMap<String, String>
-                        if (userDataMap != null) {
-                            usersList.add(userDataMap)
-                        }
-                    }
-
-                    for (userDataMap in usersList) {
-                        if (userDataMap["fullname"] == tv_name.text.toString()) {
-                            userDataMap["username"] = email.text.toString()
-                            userDataMap["contactno"] = cnum.text.toString()
-                            userDataMap["password"] = pwd.text.toString()
-                            if (uid != null) {
-                                databaseReference.child(uid).setValue(userDataMap)
-                            }
-                            Toast.makeText(this@Profilelogin, "User details updated!",Toast.LENGTH_LONG).show()
-                        }
-                    }
-                }
-
-                override fun onCancelled(databaseError: DatabaseError) {
-                    println("Database Error: ${databaseError.message}")
-                }
-            })
         }
 
+        googlemap.setOnClickListener {
+            val intent = Intent(this, MapsActivity::class.java)
+            intent.putExtra("uid", uid)
+            startActivity(intent)
+        }
+
+        databaseReference.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val usersList = ArrayList<HashMap<String, String>>()
+
+                for (userSnapshot in dataSnapshot.children) {
+                    val userDataMap = userSnapshot.value as? HashMap<String, String>
+                    if (userDataMap != null) {
+                        usersList.add(userDataMap)
+                    }
+                }
+
+                for (userDataMap in usersList) {
+                    if (userDataMap["username"] == username) {
+                        tv_name.text = userDataMap["fullname"]
+                        full_name.setText(userDataMap["fullname"])
+                        email.setText(userDataMap["username"])
+                        cnum.setText(userDataMap["contactno"])
+                        pwd.setText(userDataMap["password"])
+                    }
+                }
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                println("Database Error: ${databaseError.message}")
+            }
+        })
+
+        but_update.setOnClickListener {
+            val user = mAuth.currentUser
+            val uid2 = user?.uid
+            updateUserInfo(uid)
+            Toast.makeText(this@Profilelogin, "Profile updated!",Toast.LENGTH_LONG).show()
         }
     }
+
+    private fun updateUserInfo(uid: String?) {
+        databaseReference.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val usersList = ArrayList<HashMap<String, String>>()
+
+                for (userSnapshot in dataSnapshot.children) {
+                    val userDataMap = userSnapshot.value as? HashMap<String, String>
+                    if (userDataMap != null) {
+                        usersList.add(userDataMap)
+                    }
+                }
+
+                for (userDataMap in usersList) {
+                    if (userDataMap["fullname"] == tv_name.text.toString()) {
+                        userDataMap["username"] = email.text.toString()
+                        userDataMap["contactno"] = cnum.text.toString()
+                        userDataMap["password"] = pwd.text.toString()
+                        if (uid != null) {
+                            databaseReference.child(uid).setValue(userDataMap)
+                        }
+                    }
+                }
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                println("Database Error: ${databaseError.message}")
+            }
+        })
+    }
+}

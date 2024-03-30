@@ -1,10 +1,28 @@
 <resources>
     <string name="app_name">AidHarbour</string>
-
+    <string name="google_map_api_key">AIzaSyATvdiLDU3DJx6pp98UGwt6nEPGihGrXH4</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fullname">Full Name</string>
     <string name="email">Email</string>
     <string name="mobileno">Contact Number</string>
     <string name="password">Password</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string-array name="description_array">
+        <item>Clothes</item>
+        <item>Food</item>
+        <item>Grocery items</item>
+        <item>School supplies</item>
+        <item>Books</item>
+        <item>Medicines</item>
+    </string-array>
+    <string-array name="volunteer_array">
+        <item>Shreya Kapoor</item>
+        <item>Riya Mehta</item>
+        <item>Rohan Malhotra</item>
+        <item>Karan Goel</item>
+        <item>Arun Sharma</item>
+        <item>Raj Singh</item>
+        <item>Neha Agarwal </item>
+    </string-array>
 
 </resources>

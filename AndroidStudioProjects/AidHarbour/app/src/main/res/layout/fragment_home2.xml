@@ -4,10 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background = "@drawable/home_page3"
+    android:background="@drawable/home_page3"
     tools:context=".HomeFragment">
-
-
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -21,41 +19,63 @@
         app:titleTextColor="@android:color/white"
         app:popupTheme="@null" />
 
-
     <Button
         android:id="@+id/login_reg"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="132dp"
-        android:layout_marginTop="580dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="43dp"
         android:backgroundTint="#333A73"
         android:text="Register/Login"
+        android:textAllCaps="true"
         android:textColor="#FFFFFF"
         android:textStyle="bold" />
-
 
     <Button
         android:id="@+id/view_history"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="132dp"
-        android:layout_marginTop="630dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="190dp"
         android:backgroundTint="#333A73"
         android:text="View History"
-        android:textColor="#FDFDFD"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="true"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/locate_shelters"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="96dp"
+        android:backgroundTint="#333A73"
+        android:text="Locate Shelters"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="true"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/donate"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="145dp"
+        android:backgroundTint="#333A73"
+        android:text="Donate"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="75dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="100dp"
         android:text="Aid Harbour"
         android:textColor="#000000"
-        android:textSize="48sp"
+        android:textSize="52sp"
         android:textStyle="bold" />
-
 
 </FrameLayout>

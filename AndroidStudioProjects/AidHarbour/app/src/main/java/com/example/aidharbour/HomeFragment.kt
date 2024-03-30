@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 
@@ -45,15 +46,20 @@ class HomeFragment : Fragment() {
 
         val login_reg: Button = view.findViewById(R.id.login_reg)
         val view_history: Button = view.findViewById(R.id.view_history)
-
+        val locate_shelter: Button = view.findViewById(R.id.locate_shelters)
+        val donate: Button = view.findViewById(R.id.donate)
         login_reg.setOnClickListener {
             val intent = Intent(activity, Login::class.java)
             startActivity(intent)
         }
-
         view_history.setOnClickListener {
-            val intent = Intent(activity, History2::class.java)
-            startActivity(intent)
+            Toast.makeText(requireContext(), "Please login to view history!", Toast.LENGTH_SHORT).show()
+        }
+        locate_shelter.setOnClickListener {
+            Toast.makeText(requireContext(), "Please login to locate shelters!", Toast.LENGTH_SHORT).show()
+        }
+        donate.setOnClickListener {
+            Toast.makeText(requireContext(), "Please login to donate!", Toast.LENGTH_SHORT).show()
         }
     }
 

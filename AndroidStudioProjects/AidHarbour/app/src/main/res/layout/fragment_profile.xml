@@ -60,7 +60,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_toEndOf="@id/profile_img"
                     android:paddingLeft="30dp"
-                    android:text="Admin"
+                    android:text="-"
                     android:textColor="#000000"
                     android:textSize="20sp" />
 

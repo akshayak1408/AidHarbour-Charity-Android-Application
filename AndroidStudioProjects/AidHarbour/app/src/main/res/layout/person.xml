@@ -1,69 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginTop="35dp"
+    android:padding="8dp"
+    android:background="@drawable/gradient_background">
 
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="558dp"
+        android:layout_height="177dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.292">
 
-        <!-- First Label-Text Pair -->
         <TextView
             android:id="@+id/label1_textview"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Name :"
+            android:layout_height="55dp"
+            android:padding="16dp"
+            android:text="Name of shelter :"
             android:textSize="18sp"
-            android:padding="16dp"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/text1_textview"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Shantanu"
-            android:textSize="18sp"
+            android:layout_height="55dp"
+            android:layout_marginStart="-10dp"
             android:layout_toEndOf="@id/label1_textview"
-            android:padding="16dp"/>
+            android:padding="16dp"
+            android:text=""
+            android:textSize="18sp" />
 
-        <!-- Second Label-Text Pair -->
         <TextView
             android:id="@+id/label2_textview"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Type:"
-            android:textSize="18sp"
+            android:layout_height="55dp"
+            android:layout_below="@id/label1_textview"
+            android:layout_marginTop="-15dp"
             android:padding="16dp"
-            android:layout_below="@id/label1_textview"/>
+            android:text="Type of donation:"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/text2_textview"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Receiver"
-            android:textSize="18sp"
-            android:layout_toEndOf="@id/label2_textview"
+            android:layout_height="55dp"
             android:layout_below="@id/text1_textview"
-            android:padding="16dp"/>
-
-        <TextView
-            android:id="@+id/label3_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Description:"
-            android:textSize="18sp"
+            android:layout_marginStart="-12dp"
+            android:layout_marginTop="-13dp"
+            android:layout_toEndOf="@id/label2_textview"
             android:padding="16dp"
-            android:layout_below="@id/label2_textview"/>
+            android:text=""
+            android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/text3_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Agra Sector 25"
+            android:id="@+id/label4_textview"
+            android:layout_width="83dp"
+            android:layout_height="53dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="475dp"
+            android:layout_marginBottom="41dp"
+            android:padding="16dp"
+            android:text="From: "
             android:textSize="18sp"
-            android:layout_toEndOf="@id/label3_textview"
-            android:layout_below="@id/text2_textview"
-            android:padding="16dp"/>
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text4_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-98dp"
+            android:layout_marginBottom="38dp"
+            android:layout_toEndOf="@id/label1_textview"
+            android:padding="16dp"
+            android:text=""
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/label5_textview"
+            android:layout_width="123dp"
+            android:layout_height="53dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="434dp"
+            android:layout_marginBottom="2dp"
+            android:padding="16dp"
+            android:text="Volunteer: "
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text5_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-62dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toEndOf="@id/label1_textview"
+            android:padding="16dp"
+            android:text=""
+            android:textSize="18sp" />
 
     </RelativeLayout>
 
