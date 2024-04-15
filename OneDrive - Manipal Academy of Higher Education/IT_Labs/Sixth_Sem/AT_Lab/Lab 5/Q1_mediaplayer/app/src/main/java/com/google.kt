@@ -1,5 +1,0 @@
-package com
-
-class google {
-
-}
